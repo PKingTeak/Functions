@@ -19,7 +19,7 @@ public class GridGraph : MonoBehaviour
 
     private void Awake()
     {
-
+        Build();
         
     }
 
