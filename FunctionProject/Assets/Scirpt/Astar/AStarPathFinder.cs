@@ -39,8 +39,6 @@ public class AStarPathFinder : MonoBehaviour
 
         var open = new List<Grid>();
         var closed = new HashSet<Grid>();
-
-
         if (!gridGraph.InBounds(start) || !gridGraph.Get(start).walkable)
         {
             return null;
@@ -54,8 +52,6 @@ public class AStarPathFinder : MonoBehaviour
         startNode.gCost = 0;
         startNode.hCost = Heuristic(start, goal);
         open.Add(startNode);
-
-
 
         while (open.Count > 0)
         { 
@@ -87,19 +83,14 @@ public class AStarPathFinder : MonoBehaviour
                     }
                 }
             }
-
-
-
-
         }
-
         return null;
-
-
-
 
     }
 
+
+
+  
 
 
     List<Vector2Int> Reconstruct(Grid goal) //경로를 되짚어 리스트로 반환

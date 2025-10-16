@@ -47,6 +47,7 @@ public class GridGraph : MonoBehaviour
     public Grid Get(Vector2Int p) => nodes[p.x, p.y];
 
 
+
     public IEnumerable<Grid> GetNeighbor(Grid g, bool allowDiagonal = false)
     {
         var dir4 = new Vector2Int[]
