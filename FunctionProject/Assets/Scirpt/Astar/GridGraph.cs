@@ -109,9 +109,23 @@ public class GridGraph : MonoBehaviour
         return new Vector2Int(x, y);
     }
 
+    public (bool[,] map, int w, int h) MakeSnapShot()
+    {
+        int w = width, h = height;
+        var map = new bool[w, h];
 
+        for (int x = 0; x < w; x++)
+        {
+            for (int y = 0; y < h; y++)
+            {
+                map[x,y] = nodes[x,y].walkable;
+            
+            }
+        }
 
-
+        return (map, w, h);
+    
+    }
 
 
 }
